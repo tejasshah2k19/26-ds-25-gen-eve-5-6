@@ -203,7 +203,50 @@ Array 2.0
     //
 
 ------------------------------------------------------------
+
+STACK 
+
+    int a; //4 byte 
+
+
+c => stack 
+ 
+
+
+local variable =====> stack  
+instance variable ===> heap 
+static variable   ===> heap 
+
+
+---------------------------------------------------------------
+STACK  : LiFo => Last In First Out 
+Dmart : X Y Z P Q => No 
+
+stack of chair / stack of book 
+
+photo gallery --> 
+whatsapp --> dhiraj sir , mac sir, ram sir 
+ctrl + z  --> history 
+
+computer --> 
+    recursion 
+    ALU : expression evaluate 
+    parenth : (()()) -> valid invalid 
+
     
+
+insert  : PUSH 
+remove  : POP 
+display : display 
+
+           PEEK
+           PEEP
+            
+
+
+
+
+  
 
 
 
