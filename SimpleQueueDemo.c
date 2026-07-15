@@ -78,13 +78,18 @@ int main()
 
     display(); // 10 20 30 40 50
 
-    deQueue();//10
+    deQueue(); // 10
 
     // enQueue(50)
 
     // enQueue(60)
-    display(); // 20 30 40 50 
-    
+    display(); // 20 30 40 50
 
+    deQueue(); // 20
+    deQueue(); // 30
+    display(); //  40 50
+
+    enQueue(600); // full
     return 0;
 }
+  
