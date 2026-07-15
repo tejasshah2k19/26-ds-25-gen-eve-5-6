@@ -8,28 +8,56 @@ int rear = -1;
 
 void enQueue(int data)
 {
-    rear++;
-    queue[rear] = data;
 
-    // first time insertion
-    if (front == -1)
+    if (rear == SIZE - 1)
     {
-        front = 0;
+        printf("\nqueue full for %d", data);
+    }
+    else
+    {
+        rear++;
+        queue[rear] = data;
+
+        // first time insertion
+        if (front == -1)
+        {
+            front = 0;
+        }
     }
 }
 
 void deQueue()
 {
-       printf("\n%d removed ",queue[front]);
-       front++; 
+    if (front == -1)
+    {
+        printf("\nQueue empty : ");
+    }
+    else if (front == rear)
+    {
+        printf("\n%d removed ", queue[front]);
+        front = -1;
+        rear = -1;
+    }
+    else
+    {
+        printf("\n%d removed ", queue[front]);
+        front++;
+    }
 }
 
 void display()
 {
-    printf("\nQueue : ");
-    for (int i = front; i <= rear; i++)
+    if (front == -1)
     {
-        printf(" %d", queue[i]);
+        printf("\nQueue Empty ");
+    }
+    else
+    {
+        printf("\nQueue : ");
+        for (int i = front; i <= rear; i++)
+        {
+            printf(" %d", queue[i]);
+        }
     }
 }
 
@@ -42,17 +70,21 @@ int main()
 
     display(); // 10 20 30
 
-    deQueue(); // 10 removed
-
     enQueue(40); //
 
-    display(); // 20 30 40
+    enQueue(50); //
 
-    // deQueue( )
+    enQueue(60); // full
+
+    display(); // 10 20 30 40 50
+
+    deQueue();//10
 
     // enQueue(50)
 
     // enQueue(60)
+    display(); // 20 30 40 50 
+    
 
     return 0;
 }
