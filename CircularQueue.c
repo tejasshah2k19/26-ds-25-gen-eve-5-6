@@ -73,6 +73,11 @@ void deQueue()
         front = -1;
         rear = -1;
     }
+    else if (front == SIZE - 1)
+    {
+        printf("\n%d removed ", cq[front]);
+        front = 0;
+    }
     else
     {
         printf("\n%d removed ", cq[front]);
@@ -94,12 +99,12 @@ int main()
     deQueue();   // 20
     deQueue();   // 30
 
-    display(); //40 50 
+    display(); // 40 50
 
     enQueue(60);
     enQueue(70);
     enQueue(80);
-    enQueue(90);//full
-    display();//40 50 60 70 80  
+    enQueue(90); // full
+    display();   // 40 50 60 70 80
     return 0;
 }

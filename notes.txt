@@ -242,22 +242,84 @@ display : display
            PEEK
            PEEP
             
+--------------------------------------------------------
+two sum 
+
+
+Input: nums = [21,7,11,15,2,25,6] 
+target = 9
+output :  true
+
+target = 10
+output : false  
+
+boolean findTarget(int nums[], int target){
+
+    for(int i=0;i<nums.length;i++){
+        for(int j=i+1;j<nums.length;j++){
+            int sum = nums[i] + nums[j]; 
+            if(sum == target){
+                return true;
+            }
+        }
+    }
+    return false;
+
+}
+
+
+boolean findTarget(ArrayList<Integer> nums, int target){
+
+}
+
+
+[21,7,11,15,2,25,6] 
+    i       j 
+9
+
+array -> length 
+ArrayList -> size()
+
+for(int i=0;i<SIZE;i++){
+    for(int j=i+1;j<SIZE;j++){
+        int sum = arr[i] + arr[j]; 
+        if(sum == target){
+            return true;
+        }
+    }
+}
+return false;
+
+O(n^2)
 
 
 
 
-  
+[21,7,11,15,2,25,6] =>9 , true , false [O(n^2)]
+[2,6,7,11,15,21,25] =>9 , true , false []
+
+---------------------------------------------------------------------------
 
 
+void greet(){
+    printf(" hi ");
+}
+
+void print(){
+    printf(" hello ");
+    print(); 
+}
+
+main(){
+
+   greet();//call 
+    print();//call 
+}
 
 
+recursion -> function calling itself 
 
-
-
-
-
-
-
+BASE_CASE -> 
 
 
 
