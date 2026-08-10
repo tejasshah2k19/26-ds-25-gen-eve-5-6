@@ -303,6 +303,7 @@ O(n^2)
 
 void greet(){
     printf(" hi ");
+    print();
 }
 
 void print(){
@@ -320,6 +321,96 @@ main(){
 recursion -> function calling itself 
 
 BASE_CASE -> 
+
+-----------------------------------------------------
+
+variable -> to store the data / value 
+pointer variable -> to store the memory address 
+
+
+int a; //gcc - 4 , tc -  2 
+
+sizeof --> operator -> data . variable . data type -> size -> byte 
+
+int --> 8 byte 
+ 
+
+LinkedList ----> 
+
+1) function 
+2) pointer 
+3) structure 
+4) DMA function
+
+
+1) addition of two numbers 
+    a = 10 , b = 20 
+
+    c = a+b  // pointer 
+
+2) swap()
+----------------------------------------------------------
+
+
+array       : collection of items , data type same 
+
+structure   : collection of items , data type any 
+
+
+name  char[]
+maths int 
+sci   int 
+eng   int  
+perc  float 
+grade char
+
+
+how to create structure ?
+    struct 
+
+
+struct student {
+
+    name  char[30];
+    maths int ;
+    sci   int ;
+    eng   int  ;
+    perc  float ;
+    grade char;
+
+};
+
+struct student s[5];//s[0] s[1] ....s[4]
+struct student s1;
+struct student s2;
+struct student s3;
+
+dot operator / arrow operator 
+
+
+s.name 
+
+array of structure 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
