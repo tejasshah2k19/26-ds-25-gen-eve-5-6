@@ -196,7 +196,7 @@ Array 2.0
 
     insert(1,10); //1st location add num 10 
     insert(1,20); //1st location add num 20 
-    insert(1,10); //10 already present in the array 
+    insert(1,10); //10 already present  the array 
     //no duplicate element allowed 
     //search 
     //10 20 
@@ -388,38 +388,201 @@ struct student s3;
 dot operator / arrow operator 
 
 
+struct student s; 
 s.name 
 
 array of structure 
 
+struct student *p
+-> input process output 
+
+p->name 
+
+pointer -> 5 students 
+----------------------------------------------------------
+
+void add(){
+
+    //implicit 
+    int a;// 4 byte :GCC TC:2byte 
+
+    int arr[5]; // fix ---static memory allocation 
+
+    //10 20 30 40 50 ---- X X X X X 
+    //10 20 ---- Y Y Y 
+
+
+} 
+
+---- Dynamic memory alloaction DMA  
+
+
+int main(){
+    int a; 
+    int k[5] --1 2 3 4 5 -- +5 6 7 8 9 10 -- +5 11 12 -> -10 
+    //
+    //2 
+    //
+    //
+    //
+    //allocate 
+    //release 
+    add();
+}
+  
+
+allocation 
+    --- calloc() -- multiple block same size --array 
+    --- malloc() -- single block  
+
+release 
+    --- free() 
+
+resize 
+    --- realloc() 
+
+
+
+#include<stdlib.h> 
+
+
+-----------------------------------------------------
+marksheet -> DMA 
+    single student 
+
+    name : rock         char *name 
+    maths : 100         int  *maths 
+    sci   : 100         int  *sci 
+    eng   : 100         int  *eng 
+    perc  : 100         float *perc
+    grade : P   35+     char *grade 
+
+-------------------------------------------------------
+
+application of stack 
+    expression evaluate 
+    10+20
+    10+20*30*2+100
+
+polish notation 
+1) inFix   : a+b 
+2) preFix  : +ab 
+3) postfix : ab+ 
+
+
+( )
+^ $ 
+* / 
++ - 
+
++ -  => left to right 
+* /  => left to right 
+()() => left to right 
+^ $  => right to left 
+
+
+
+
+infix to postfix 
+
+a + b 
+ab+ 
+
+a + b * c 
+a + bc* 
+abc*+ 
+
+
+a + b + c * d * f + g / y 
+a + b +  cd* * f + g / y 
+a + b +  cd*f* + g / y 
+a + b +  cd*f* + gy/ 
+ab+ +  cd*f* + gy/ 
+ab+cd*f*+ + gy/
+ab+cd*f*+gy/+ 
+
+
+a + b * c $ d / e ^ f * g - e $ f 
+abcd$*ef^/g*+ef$-
+
+
+a + b - c * d / f + g * h - q 
 
 
 
 
 
 
+a + (b * c) $ (d / e) ^ (f * g) - e $ f 
+
+a + bc* $ de/ ^ fg* - e $ f 
+
+a + bc*de/fg*^$ - ef$ 
+
+abc*de/fg*^$+ef$-
+
+
+
+
+q + ( w  - e ) $ ( r * t ) ^ y $ ( u + i ) * ( o / p )
+q + we- $ rt* ^ y $ ui+ * op/
+q + we-rt*yui+$^$ * op/
+qwe-rt*yui+$^$op/*+ 
 
 
 
 
 
+a + b   => +ab  ab+  
+
+
+infix to prefix 
+
+1) Q + W - E $  R ^ T / Y * U $ I - O + P 
+
+
+Q + W - E $  R ^ T / Y * U $ I - O + P 
+
+
+1) if input is operand -> o/p and it its operator than push -> rule 2 and 3  
+2) if input operators having same precedence / lower precedence  than stack pop and then push  otherwise push 
+3)  
 
 
 
+--------------------------------------------------------------------------------------------
 
 
+linked list --> 
+
+	dynamic list
+			collection of data 
+    self referential list - structure 
+
+	[10,20,30] 
+  	allocate 
+	release 
+
+node -> 1) data 
+        2) next 
+
+ 1) Single 
+ 2) Dobule 
+ 3) circular -> 3.1 3.2
 
 
+Single LinkedList ----> [ data[] | next ]
 
 
+?data type=> node ===> structure -> collection of items with different data types. 
+ 
+
+-------------------------------------------------------------------
 
 
-
-
-
-
-
-
+addNode(10)
+addNode(20)
+addNode(30)
 
 
 
