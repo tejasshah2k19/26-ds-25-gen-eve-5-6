@@ -585,7 +585,27 @@ addNode(20)
 addNode(30)
 
 
+-------------------------------------------------------------------
 
+
+calloc() -- allocate multiple blocks with same size -- continue  
+malloc() -- allocate single block -- cast ---- 
+
+
+head = NULL 
+first node ? 
+
+if (head == NULL){
+    head = 
+}
+
+second -> 
+
+[10]->[20]
+
+[10]->[20]->[30]
+head 
+display --> 
 
 
 
