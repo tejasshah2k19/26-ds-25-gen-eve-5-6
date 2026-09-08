@@ -610,11 +610,17 @@ display -->
 
 
 
+-----------------------------------------------------------------
+
+LinkedList --> allocate , deallocate 
+code -> 
 
 
+char[] 
+String --> 
 
-
-
+java --> ArrayList , LinkedList 
+ 
 
 
 
