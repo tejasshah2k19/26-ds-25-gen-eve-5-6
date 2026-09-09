@@ -622,5 +622,21 @@ String -->
 java --> ArrayList , LinkedList 
  
 
+linked list -> dynamic list -> allocate , release   no fix memory 
 
 
+node ->
+
+1)
+    [ data | next ]
+single-linked list 
+
+2) 
+Double linked list 
+    [ prev | data | next  ]
+
+3) 
+Circular Linked List 
+    single 
+    double 
+    
