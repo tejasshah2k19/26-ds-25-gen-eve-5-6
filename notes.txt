@@ -640,3 +640,46 @@ Circular Linked List
     single 
     double 
     
+
+
+
+---------------------------------------------------------------------------
+LinkedList class 
+java.util
+
+
+DS Linear 
+    array 
+    stack
+    queue 
+    LinkedList 
+
+NoN Linear 
+    Tree 
+    Graph 
+
+
+Tree ---> 
+
+Binary Tree 
+    max 2 node {0 1 2 }
+
+
+
+total node : 
+root node : 
+leaf node : 
+sibling node pair :
+parent of 4 :
+child of 7 : 
+height : 
+level : 
+
+BST : Binary Search Tree 
+
+
+1) i am a binary tree : MAX 2 Child 
+2) child > parent -> right 
+3) child < parent -> left 
+
+50  90  30  100 85  20  35  60 
