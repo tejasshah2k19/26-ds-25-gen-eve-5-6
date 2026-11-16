@@ -23,7 +23,7 @@ int calcBF(struct node *root)
         rh = root->right->height;
     }
 
-    return lh - rh; 
+    return lh - rh;
 }
 
 int calcHeight(struct node *root)
@@ -73,16 +73,36 @@ struct node *addNode(struct node *tmp, int value) // 60, 70
             tmp->left = addNode(tmp->left, value);
         }
     }
+
     tmp->height = 1 + calcHeight(tmp);
 
     int bf = calcBF(tmp);
 
     // printf("\n %d(%d) ",tmp->data,bf);
-    if(bf > 1){
-        printf("\nImbalance LEFT %d",tmp->data);
+    if (bf > 1)
+    {
+        printf("\nImbalance LEFT ");
+        if (tmp->left->data < value)
+        {
+            printf(" - RIGHT %d", tmp->data);
+        }
+        else
+        {
+            printf(" - LEFT %d", tmp->data);
+        }
     }
-    else if(bf < -1){
-        printf("\nImbalance RIGHT %d",tmp->data);     
+    else if (bf < -1)
+    {
+        printf("\nImbalance RIGHT - ");
+        if (tmp->right->data < value)
+        {
+            printf(" RIGHT : %d", tmp->data);
+        }
+        else
+        {
+
+            printf(" LEFT : %d", tmp->data);
+        }
     }
 
     return tmp;
@@ -190,13 +210,31 @@ struct node *deleteNode(struct node *root, int key)
 int main()
 {
 
-    root = addNode(root, 50); // NULL,50
-    addNode(root, 60);        // 50 , 60
-    addNode(root, 70);
-    // // addNode(root, 40);
+    // RR
+    //     root = addNode(root, 50); // NULL,50
+    //      addNode(root, 60);        // 50 , 60
+    //      addNode(root, 70);
+
+    // RL
+    //  root = addNode(root, 50); // NULL,50
+    //  addNode(root, 70);        // 50 , 60
+    //  addNode(root, 60);
+
+    //  LL
+    // root = addNode(root, 50); // NULL,50
+    // addNode(root, 40);        // 50 , 60
     // addNode(root, 30);
-    // addNode(root, 45);
-    // addNode(root, 55);
+
+
+    //LR 
+    root = addNode(root, 50); // NULL,50
+    addNode(root, 30);        // 50 , 60
+    addNode(root, 40);
+
+
+    //rotation --> 
+    
+
     printf("\nAll data => ");
     inOrder(root);
 
