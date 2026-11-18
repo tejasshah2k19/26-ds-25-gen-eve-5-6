@@ -49,6 +49,32 @@ int calcHeight(struct node *root)
     }
 }
 
+struct node *leftRotate(struct node *root)
+{
+    struct node *rootRight = root->right;
+
+    root->right = rootRight->left;
+    rootRight->left = root;
+
+    root->height = 1 + calcHeight(root);
+    rootRight->height = 1 + calcHeight(rootRight);
+
+    return rootRight;
+}
+
+struct node *rightRotate(struct node *root)
+{
+    struct node *rootLeft = root->left;
+
+    root->left = rootLeft->right;
+    rootLeft->right = root;
+
+    root->height = 1 + calcHeight(root);
+    rootLeft->height = 1 + calcHeight(rootLeft);
+
+    return rootLeft;
+}
+
 struct node *addNode(struct node *tmp, int value) // 60, 70
 {
     if (tmp == NULL)
@@ -85,10 +111,13 @@ struct node *addNode(struct node *tmp, int value) // 60, 70
         if (tmp->left->data < value)
         {
             printf(" - RIGHT %d", tmp->data);
+            tmp->left = leftRotate(tmp->left);
+            return rightRotate(tmp);
         }
         else
         {
             printf(" - LEFT %d", tmp->data);
+            return rightRotate(tmp);
         }
     }
     else if (bf < -1)
@@ -97,6 +126,7 @@ struct node *addNode(struct node *tmp, int value) // 60, 70
         if (tmp->right->data < value)
         {
             printf(" RIGHT : %d", tmp->data);
+            return leftRotate(tmp);
         }
         else
         {
@@ -210,10 +240,10 @@ struct node *deleteNode(struct node *root, int key)
 int main()
 {
 
-    // RR
-    //     root = addNode(root, 50); // NULL,50
-    //      addNode(root, 60);        // 50 , 60
-    //      addNode(root, 70);
+    // // RR
+    // root = addNode(root, 50); // NULL,50
+    // root = addNode(root, 60); // 50 , 60
+    // root = addNode(root, 70);
 
     // RL
     //  root = addNode(root, 50); // NULL,50
@@ -225,15 +255,12 @@ int main()
     // addNode(root, 40);        // 50 , 60
     // addNode(root, 30);
 
+    // LR
+    root = addNode(root, 100); // NULL,50
+    root = addNode(root, 50);  // 50 , 60
+    root = addNode(root, 70);
 
-    //LR 
-    root = addNode(root, 50); // NULL,50
-    addNode(root, 30);        // 50 , 60
-    addNode(root, 40);
-
-
-    //rotation --> 
-    
+    // rotation -->
 
     printf("\nAll data => ");
     inOrder(root);
